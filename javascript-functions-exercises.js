@@ -242,7 +242,21 @@ function factorial(num) {
 // Here 46 is the amount. and 25, 10, 5, 2, 1 are coins. 
 // Output : 25, 10, 10, 1
 
-
+// redo from Evan
+function amountToCoins(amount, coins) {
+	coins.sort(function (a, b) { return b - a; });
+	var result = [];
+    while (amount > 0) {
+  	for (var i = 0; i < coins.length; i++) {
+    	if (amount >= coins[i]) {
+      	  amount -= coins[i];
+          result.push(coins[i]);
+  		  i = coins.length;
+      }
+    }
+  }
+  return result;
+}
 
 
 
@@ -250,6 +264,7 @@ function factorial(num) {
 
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result. Go to the editor
 
+//easy redo
 
 
 
@@ -260,7 +275,7 @@ function factorial(num) {
 // Example string : "thequickbrownfoxjumpsoverthelazydog"
 // Expected Output : "thequickbrownfxjmpsvlazydg"
 
-
+//easy redo
 
 
 
