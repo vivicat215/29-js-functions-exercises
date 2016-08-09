@@ -28,7 +28,20 @@ function rev(num) {
 // 2. Write a JavaScript function that checks whether a passed string is palindrome or not? Go to the editor
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 
+function palindrome(string) {
+  var temp1 = string.split(' ');// ['nurse', 'run']
+  var temp2 = temp1.join(''); // 'nurserun'
+  var array = temp2.split(''); // a p p l e
+  var result = true;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] !== array[array.length - i - 1]) {
+      result = false;
+    }
+  }
+  return result; 
+}
 
+/* another solution
 var sample = 'nurses run'; 
 
 function pal(string) {
@@ -42,7 +55,7 @@ function pal(string) {
     return temp;
 }
 pal(sample);
-
+*/ 
 
 
 
