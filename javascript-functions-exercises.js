@@ -4,6 +4,16 @@
 // Example x = 32243;
 // Expected Output : 34223	
 
+// Bracket notation with string won't work on IE7 or earlier IE
+function reverse(string) {
+  var result = ''; 
+  for (var i = 1; i <= string.length; i ++) {
+    result += string[string.length - i];
+  }
+  return result;
+}
+
+/*
 function rev(num) {
 	var myarray = num.toString().split(''); // [ '3', '2', '2', '4', '3' ]
 	console.log(myarray);
@@ -13,8 +23,7 @@ function rev(num) {
 	}
 	return parseInt(temp.join(''));
 }
-rev(32243); 
-
+*/
 
 // 2. Write a JavaScript function that checks whether a passed string is palindrome or not? Go to the editor
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
@@ -95,8 +104,6 @@ var mySort = function(str) {
 // 6. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. Go to the editor
 // Example string : 'Web Development Tutorial' 
 // Expected Output : 'Development'
-
-
 
 
 function longest(str) {
@@ -292,8 +299,31 @@ function amountToCoins(amount, coins) {
 // 18. Write a function for searching JavaScript arrays with a binary search. Go to the editor
 // Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
 
+// Difficult from Even
+
+function binary(array, value) {
+	var is_found = false;
+	var start_max = array.length;
+	var start_min = 0;
+	
+	while (is_found === false) {
+		var final_start = Math.floor((start_max + start_min)/2);
+		if (value < array[final_start]) {
+			start_max = final_start;
+		}
+		else if(value > array[final_start]) {
+			start_min = final_start;
+		}
+		else {
+			is_found = true;
+		}
+		console.log(final_start);
+	}
+	return final_start;
+};
 
 
+console.log(binary(['adam','bob','catherine','daniel','david','eric','ernie','foster','guardiola','hamlet','hamilton','ingrid','iniesta','inzaghi','jack','jacob'], 'daniel'));
 
 
 
