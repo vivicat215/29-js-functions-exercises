@@ -28,10 +28,12 @@ function rev(num) {
 // 2. Write a JavaScript function that checks whether a passed string is palindrome or not? Go to the editor
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 
+// redo
+
 function palindrome(string) {
-  var temp1 = string.split(' ');// ['nurse', 'run']
-  var temp2 = temp1.join(''); // 'nurserun'
-  var array = temp2.split(''); // a p p l e
+  var temp1 = string.split(' ');// ['nurses', 'run']
+  var temp2 = temp1.join(''); // 'nursesrun'
+  var array = temp2.split(''); //[ 'n', 'u', 'r', 's', 'e', 's', 'r', 'u', 'n' ]
   var result = true;
   for (var i = 0; i < array.length; i++) {
     if (array[i] !== array[array.length - i - 1]) {
@@ -61,20 +63,19 @@ pal(sample);
 
 // 3. Write a JavaScript function that generates all combinations of a string. Go to the editor
 // Example string : 'dog' 
-// Expected Output : d,do,dog,o,og,g 
+// Expected Output : d,do,dog,o,og,g = newArr[0, 01, 012, 1, 12, 2]
 
-
-
+// redo
 
 function combo(string) {
 	string = string.split('');
-  var newArr = [];
+	var newArr = [];
 	for (var i = 0; i < string.length; i++) {
-  	for(var j = i + 1; j <= string.length; j++) {
-    	newArr.push(string.slice(i, j).join(''));
-  	}
+		for(var j = i + 1; j <= string.length; j++) {
+			newArr.push(string.slice(i, j).join(''));
+		}
 	}
-  return newArr;
+	return newArr;
 };
 
 
@@ -84,7 +85,7 @@ function combo(string) {
 // Expected Output : 'abeemrstw'
 // Assume punctuation and numbers symbols are not included in the passed string.
 
-
+// redo
 
 
 var mySort = function(str) {
