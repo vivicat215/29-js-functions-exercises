@@ -178,7 +178,7 @@ function vowel(str) {
 */
 }
 
-console.log(vowel('The quick brown fox'));
+// console.log(vowel('The quick brown fox'));
 
 // redo
 // 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not. Go to the editor
@@ -216,9 +216,16 @@ return is_prime;
 // Sample array : [1,2,3,4,5]
 // Expected Output : 2,4 
 
+function secondLowestGreatest(array) {
+	var result = '';
+	var sortedArray = array.sort(function(a, b) {
+		return a - b;
+	});
+	result = result + sortedArray[0] + ', ' + sortedArray[array.length - 1];
+	return result;
+};
 
-
-
+console.log(secondLowestGreatest([12,22,31,44,5,26])); 
 
 
 // 12. Write a JavaScript function which says whether a number is perfect. Go to the editor
@@ -337,7 +344,7 @@ function binary(array, value) {
 };
 
 
-console.log(binary(['adam','bob','catherine','daniel','david','eric','ernie','foster','guardiola','hamlet','hamilton','ingrid','iniesta','inzaghi','jack','jacob'], 'daniel'));
+// console.log(binary(['adam','bob','catherine','daniel','david','eric','ernie','foster','guardiola','hamlet','hamilton','ingrid','iniesta','inzaghi','jack','jacob'], 'daniel'));
 
 
 
